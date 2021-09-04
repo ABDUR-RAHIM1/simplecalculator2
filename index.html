@@ -1,0 +1,225 @@
+
+
+<html> 
+
+   <head> 
+
+      <script> 
+
+         //function that display value 
+
+         function dis(val) 
+
+         { 
+
+             document.getElementById("result").value+=val 
+
+         } 
+
+           
+
+         //function that evaluates the digit and return result 
+
+         function solve() 
+
+         { 
+
+             let x = document.getElementById("result").value 
+
+             let y = eval(x) 
+
+             document.getElementById("result").value = y 
+
+         } 
+
+           
+
+         //function that clear the display 
+
+         function clr() 
+
+         { 
+
+             document.getElementById("result").value = "" 
+
+         } 
+
+      </script> 
+
+      <!-- for styling -->
+
+      <style> 
+      *{margin:0; padding:0;}
+      body{
+        background:gray;
+      }
+      #wrapper{
+        width:400px;
+        margin:30px auto;
+        background: white;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+        overflow:hidden;
+      }
+
+         .title{ 
+
+         margin-bottom: 10px; 
+
+         text-align:center; 
+
+         width: 385px; 
+         padding:5px;
+
+         color:green; 
+         background:#EFDECD;
+         border: solid black 2px; 
+         font-weight:bold;
+
+         } 
+
+  
+
+         input[type="button"] 
+
+         { 
+
+         background-color:red; 
+
+         color: black; 
+
+         border: solid black 2px; 
+
+         width:100%;
+         height:100%;
+         font-size:40px;
+         color:white;
+         border-radius:7px;
+         box-shadow:3px 3px 30px black;
+
+         } 
+     input[type="button"]:hover{
+        background:green;
+     }
+
+         input[type="text"] 
+
+         { 
+
+         background-color:white; 
+
+         border: solid black 2px; 
+         font-size:25px;
+         width:100%;
+         height:100%;
+
+         } 
+         #footer{
+           width:400px;
+           height:60px;
+           background: black;
+           border-radius:0px 0px 15px 15px;
+         }
+         #footer p{
+           padding:10px;
+           font-size:21px;
+           color:white;
+           text-transform: uppercase;
+           text-align:center;
+         }
+         #footer a{
+            color:#8fb899;
+			 text-decoration:none;
+         }
+       #footer a:hover{
+	      color:white;
+		  text-decoration:underline;
+	   }
+      </style> 
+
+   </head> 
+
+   <!-- create table -->
+
+   <body> 
+   <div id="wrapper">
+
+      <div class = title > Calculator</div> 
+
+      <table border="1"style="width:400px;"height="400px;"> 
+
+         <tr> 
+
+            <td colspan="3"><input type="text" id="result"/></td> 
+
+            <!-- clr() function will call clr to clear all value -->
+
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+
+         </tr> 
+
+         <tr> 
+
+            <!-- create button and assign value to each button -->
+
+            <!-- dis("1") will call function dis to display value -->
+
+            <td><input type="button" value="1" onclick="dis('1')"/> </td> 
+
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+
+         </tr> 
+
+         <tr> 
+
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+
+         </tr> 
+
+         <tr> 
+
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+
+         </tr> 
+
+         <tr> 
+
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+
+            <!-- solve function call function solve to evaluate value -->
+
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+
+         </tr> 
+
+      </table> 
+      
+      <footer>
+        <div id="footer">
+          <p>a Design by <a href="https://www.facebook.com/2356570211333190/posts/3120031458320391/?app=fbl" >abdur rahim</a></p>
+        </div>
+      </footer>
+      
+</div>
+   </body> 
+
+</html>    
